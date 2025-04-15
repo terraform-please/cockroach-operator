@@ -1,15 +1,3 @@
-resource "kubernetes_manifest" "namespace_cockroach_operator_system" {
-  manifest = {
-    "apiVersion" = "v1"
-    "kind" = "Namespace"
-    "metadata" = {
-      "labels" = {
-        "control-plane" = "cockroach-operator"
-      }
-      "name" = "cockroach-operator-system"
-    }
-  }
-}
 
 resource "kubernetes_manifest" "serviceaccount_cockroach_operator_system_cockroach_operator_sa" {
   manifest = {
